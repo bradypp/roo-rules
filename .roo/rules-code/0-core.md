@@ -38,7 +38,6 @@ globs: ['*']
 
 ## Code Implementation:
 
-- **Start with working solutions** - implement core functionality first, then optimize
 - **Use established patterns** - leverage existing project patterns and proven approaches
 - **Add appropriate logging** - include debugging information for complex operations
 - **Handle edge cases** - consider boundary conditions and error scenarios

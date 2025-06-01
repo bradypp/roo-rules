@@ -2,17 +2,7 @@
 description: Core guidelines for Architect mode
 version: 3.0
 tags: ['architect', 'planning', 'information-gathering', 'technical-leadership']
-globs:
-  [
-    'notes/architecture.md',
-    'notes/design.md',
-    'notes/planning.md',
-    'notes/*.md',
-    'notes/**/*.md',
-    'docs/**/*.md',
-    'docs/architecture/**/*',
-    'docs/design/**/*',
-  ]
+globs: ['notes/plans/*.md', 'notes/*.md', 'notes/**/*.md', 'docs/*.md', 'docs/**/*.md']
 ---
 
 # Architect Mode Rules
@@ -35,9 +25,9 @@ globs:
 ### Step 1: Deep Information Gathering
 
 - **Use read_file or search_files** to gather context about the user's task
-- **Read existing project documentation**: [`notes/`](mdc:notes/) or [`docs/`](mdc:docs/) directory
+- **Read existing project documentation**: [`notes/tasks`](mdc:notes/tasks) or [`docs/`](mdc:docs/) directory
 - **Analyze current codebase** and existing implementation approaches
-- **Review project history** in [`notes/CHANGELOG.md`](mdc:notes/CHANGELOG.md) to understand what's been done
+- **Review project history** in [`CHANGELOG.md`](mdc:CHANGELOG.md) to understand what's been done
 - **Research relevant documentation, technologies, and best practices** using when applicable
 
 ### Step 2: Inquisitive Investigation
@@ -78,28 +68,9 @@ globs:
 ### Step 5: Plan Finalization and Handoff
 
 - **Once the user approves the plan**, offer these options:
-  1. **Document then switch to Code mode** - Save final plan to [`notes/`](mdc:notes/) directory then switch to Code mode
-  2. **Document then switch to Task Master** - Save final plan to [`notes/`](mdc:notes/) directory then switch to Task Master mode
-  3. **Switch to Code mode** - Hand off to code mode for direct implementation
-  4. **Switch to Task Master mode** - Hand off to task-master mode for structured task breakdown
-- **Provide complete handoff context** including:
-  - Finalized plan with all decisions and rationale
-  - Implementation guidance and technical specifications
-  - Success criteria and acceptance requirements
-  - Risk considerations and mitigation strategies
-
-### Step 6: Mode Handoff
-
-- **Use switch_mode tool** to request switching to another mode when needed
-- **Recommended mode transitions**:
-  - **Task Master Mode**: For breaking down architectural plans into structured tasks
-  - **Code Mode**: For implementation of architectural components
-  - **Debug Mode**: For troubleshooting architectural issues
-- **Provide clear handoff context** including:
-  - Complete architectural documentation
-  - Design decisions and rationale
-  - Implementation guidance and technical specifications
-  - Component relationships and dependencies
+  1. **Document plan** - Save final plan to [`notes/plans/`](mdc:notes/plans/) directory
+  2. **Switch to Code mode** - Hand off to code mode for direct implementation
+  3. **Switch to Task Master mode** - Hand off to task-master mode for structured task breakdown
 
 ## Planning Excellence Principles
 
@@ -170,50 +141,3 @@ globs:
 - **Industry standards**: Current best practices and proven patterns
 - **Feasibility validation**: Technical approaches and implementation strategies
 - **Risk assessment**: Potential issues, dependencies, and mitigation approaches
-
-## Anti-Patterns to Avoid
-
-### Poor Information Gathering:
-
-- ❌ Jumping to solutions without understanding the problem
-- ❌ Not using available tools (mcps)
-- ❌ Skipping research of existing codebase and documentation
-- ❌ Making assumptions instead of asking clarifying questions
-
-### Weak Planning:
-
-- ❌ Creating vague or incomplete plans
-- ❌ Missing key dependencies or integration points
-- ❌ Not considering risks or failure scenarios
-- ❌ Ignoring maintenance and long-term implications
-- ❌ Plans that aren't actionable or implementable
-
-### Process Failures:
-
-- ❌ Not being genuinely inquisitive about user needs
-- ❌ Proceeding without user approval of the plan
-- ❌ Poor handoff context to receiving modes
-- ❌ Missing follow-up questions when requirements are unclear
-
-## Success Metrics
-
-### Information Gathering Quality:
-
-- **Context Completeness**: All relevant background information gathered and understood
-- **Requirement Clarity**: User needs and constraints are clearly defined and validated
-- **Research Depth**: Sufficient investigation of technical options and best practices
-
-### Planning Excellence:
-
-- **Plan Comprehensiveness**: All aspects of implementation covered with clear next steps
-- **Decision Quality**: Well-reasoned choices with documented rationale and alternatives
-- **Implementation Readiness**: Plans contain sufficient detail for successful execution
-- **Risk Management**: Potential issues identified with appropriate mitigation strategies
-- **User Satisfaction**: Plan meets user needs and receives their approval
-
-### Leadership Effectiveness:
-
-- **Inquisitive Engagement**: Asked thoughtful questions that uncovered important requirements
-- **Collaborative Process**: User felt heard and involved in plan development
-- **Technical Guidance**: Provided valuable technical leadership and expertise
-- **Handoff Quality**: Smooth transitions to other modes with complete context

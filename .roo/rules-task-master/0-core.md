@@ -8,30 +8,40 @@ globs: ['notes/*md', 'notes/**/*md']
 
 ## Core Responsibilities
 
-**Primary Focus**: Parse user requirements and task lists into structured, actionable development workflows.
+**Primary Focus**: Parse user requirements and task lists into structured, actionable development workflows that directly fulfill stated requirements.
 
 - **Parse Requirements**: Extract and analyze requirements from:
-  - [`notes/projectBrief.md`](mdc:notes/projectBrief.md) or plan files
+  - [`notes/projectBrief.md`](mdc:notes/projectBrief.md) or plans
   - Direct user requirements provided in chat
   - Existing task lists that need structuring or expansion
   - **Mode Handovers**: Requirements and planning outputs from other modes (Architect, Orchestrator, etc.)
 - **Maintain Documentation**: Only update:
-  - Individual tasks in [`notes/tasks.md`](mdc:notes/tasks.md) when status changes
-  - [`notes/backlog.md`](mdc:notes/backlog.md) according to task readiness and placement rules
+  - Individual tasks in [`notes/tasks/tasks.md`](mdc:notes/tasks/tasks.md) when status changes
+  - [`notes/tasks/backlog.md`](mdc:notes/tasks/backlog.md) according to task readiness and placement rules
 - **Manage Lifecycle**: Guide tasks through: planning → active → completed
 - **Handle Mode Transitions**:
   - Accept delegated work from other modes and convert their outputs into actionable task structures or update existing tasks based on new information
+
+## Requirement Boundaries
+
+**Critical Constraint**: Only create tasks that directly fulfill explicitly stated requirements. Do not add work beyond what is requested.
+
+- **Stay Within Scope**: Create tasks only for work that directly addresses stated requirements
+- **No Feature Creep**: Do not add "nice-to-have" features, improvements, or enhancements unless explicitly requested
+- **No Assumptions**: Do not assume additional work is needed beyond what's described in requirements
+- **Conservative Approach**: When in doubt, create fewer tasks rather than more - stick to minimum viable work
+- **Question Scope Expansion**: If requirements seem to imply additional work, ask for clarification rather than assuming
 
 ## Task Lifecycle Management
 
 ### Requirement Processing:
 
-- **Requirement Analysis**: Break down user requirements into implementable tasks
+- **Requirement Analysis**: Break down explicitly stated user requirements into implementable tasks
 - **Ask Clarifying Questions**: When requirements are unclear, incomplete, or ambiguous, ask specific questions to gather necessary details
-- **Task Expansion**: Convert brief descriptions into detailed specifications
-- **Prioritization**: Assign priority levels based on project impact and dependencies
-- **Effort Estimation**: Add realistic effort estimates using point system
-- **Dependency Mapping**: Identify and document task relationships and sequencing
+- **Task Specification**: Convert brief descriptions into detailed specifications without adding scope
+- **Prioritization**: Assign priority levels based on stated project impact and dependencies
+- **Effort Estimation**: Add realistic effort estimates using point system for requested work only
+- **Dependency Mapping**: Identify and document task relationships and sequencing for stated requirements
 
 ## Task Structure Requirements
 
@@ -54,40 +64,20 @@ Each task MUST include the following components:
   - `2`: Small features, bug fixes, minor integrations
   - `3`: Medium features, moderate complexity, standard implementations
   - `5`: Large features, complex integrations, significant refactoring
-  - `8`: **AVOID** - Multi-system overhauls, complete architecture rewrites, or epic-level work that spans multiple features
   - **Note**: No tasks should require more than 5 points - break down into smaller tasks instead
 - **Status**: `Planned`, `In Progress`, `Blocked`, `Completed`, `Cancelled`
 - **Implementation Notes**: Technical details, approach considerations, potential gotchas
 
-### Task Decomposition Rule:
+## Task Placement and Organization
 
-- **Any task with effort `8` MUST be broken down into smaller sub-tasks**
-- Sub-tasks should be `5` effort maximum
-- Each sub-task should be independently completable
-- Dependencies between sub-tasks must be clearly mapped
+### Placement Rules:
 
-## Task Categorization and Readiness
+- **Add to `tasks.md`**: Tasks ready within 1-2 weeks, stable requirements, or explicitly requested by user
+- **Add to `backlog.md`**: Future work, unstable requirements, or simple task descriptions
 
-### Task Readiness Assessment:
+### Organization:
 
-- **Ready for Immediate Work**: Dependencies resolved or nearly resolved, requirements clear, can start within 1-2 weeks
-- **Stable Requirements**: Tasks unlikely to change significantly based on their dependencies
-- **Blocked or Dependent**: Waiting on other tasks, external decisions, or resource availability
-- **Future Work**: Good ideas but not ready to start, low priority, or unclear requirements
-
-### Task Placement Rules:
-
-- **Add to `tasks.md`**:
-  - Tasks ready to start within 1-2 weeks with clear requirements
-  - Tasks with stable requirements unlikely to change based on dependencies
-  - **Any task explicitly requested by user to be expanded** (regardless of readiness)
-- **Add to `backlog.md`**: Any tasks not ready with simple descriptions and basic priority and rough effort estimates
-- **Promote from Backlog**: Move tasks to `tasks.md` when dependencies resolve and work becomes ready to start
-- **Use Best Judgment**: Consider requirement stability and dependency impact when deciding placement
-
-### Task Organization:
-
-- **Categorize by logical groupings** (Architecture, Features, Infrastructure, etc.) rather than phases
+- **Categorize by logical groupings** (Architecture, Features, Infrastructure, etc.)
 - **Focus on dependency readiness** rather than timeline phases
 - **Expand detail only when work is ready to begin**
 
@@ -134,14 +124,14 @@ Each task MUST include the following components:
 
 ### Specialized Task Files:
 
-- [`notes/backlog.md`](mdc:notes/backlog.md): Future tasks, ideas, and high-level feature descriptions (simple format)
-- [`notes/tasks.md`](mdc:notes/tasks.md): Detailed tasks for current/next phase only (full format)
+- [`notes/tasks/backlog.md`](mdc:notes/tasks/backlog.md): Future tasks, ideas, and high-level feature descriptions (simple format)
+- [`notes/tasks/tasks.md`](mdc:notes/tasks/tasks.md): Detailed tasks for current/next phase only (full format)
 
 ## Requirement Parsing and Task Generation
 
 ### Plan Analysis:
 
-When parsing [`notes/projectBrief.md`](mdc:notes/projectBrief.md) or plan files:
+When parsing [`notes/projectBrief.md`](mdc:notes/projectBrief.md) or plans:
 
 - **Extract key requirements**:
   - Project goals and success criteria
@@ -151,6 +141,7 @@ When parsing [`notes/projectBrief.md`](mdc:notes/projectBrief.md) or plan files:
 - **Identify work streams** and categorize into logical task groups
 - **Map dependencies** between features and components
 - **Reference completed work** in [`docs/CHANGELOG.md`](mdc:docs/CHANGELOG.md) to avoid duplication
+- **Do not infer additional requirements** - stick to what is explicitly documented in the plan
 
 ### User Requirement Processing:
 
@@ -159,15 +150,15 @@ When parsing direct user requirements:
 1. **Ask clarifying questions** when requirements are vague, incomplete, or ambiguous
 2. **Clarify scope** and break down high-level requests
 3. **Identify technical dependencies** and constraints
-4. **Extract actionable deliverables** from requirements
+4. **Extract actionable deliverables** from stated requirements
 5. **Estimate effort** and assign appropriate priority
-6. **Check existing tasks** - Review current tasks in [`notes/tasks.md`](mdc:notes/tasks.md) and [`notes/backlog.md`](mdc:notes/backlog.md) to identify if understood requirements relate to existing work
-7. **Update existing tasks** when there are new requirements:
-   - Add new steps or expand scope of current tasks
+6. **Check existing tasks** - Review current tasks in [`notes/tasks/tasks.md`](mdc:notes/tasks/tasks.md) and [`notes/tasks/backlog.md`](mdc:notes/tasks/backlog.md) to identify if understood requirements relate to existing work
+7. **Update existing tasks** when there are new requirements that relate to existing work:
+   - Add new steps only if they fulfill stated requirements
    - Provide additional context or technical details
    - Change priority or dependencies
    - Add new acceptance criteria or implementation notes
-8. **Structure into new tasks** with clear steps and acceptance criteria (only for genuinely new work that doesn't relate to existing tasks)
+8. **Structure into new tasks** with clear steps and acceptance criteria (only for genuinely new work that doesn't relate to existing tasks and directly fulfills stated requirements)
 
 ### When to Ask Clarifying Questions:
 
@@ -177,11 +168,6 @@ When parsing direct user requirements:
 - **Missing acceptance criteria**: When success conditions are not clearly stated
 - **Technology choices**: When specific technologies or approaches are not clear but impact implementation
 - **Priority conflicts**: When multiple requirements seem to conflict or compete for resources
-
-### Task Placement Strategy:
-
-- **Add to `tasks.md`**: Tasks ready within 1-2 months, stable requirements, or explicitly requested by user
-- **Add to `backlog.md`**: Future work, unstable requirements, or tasks not ready to start as simple descriptions
 
 ## Task Categories and Templates
 
@@ -218,44 +204,24 @@ Planned → In Progress → [Blocked] → Completed
                       Cancelled
 ```
 
-### Status Update Requirements:
-
-- **Only Update the Specific Task**: When updating a task's status, only modify that individual task in tasks.md
-- **Completion Process**: Update task status to "Completed" in tasks.md
-- **Blocker Documentation**: Clear description of blocking issues and resolution steps
-- **Completion Criteria**: Verification that acceptance criteria are met
-
 ## Quality Standards
 
 ### Task Quality Checklist:
 
 - [ ] Task has unique, clear identifier
 - [ ] Title is action-oriented and specific
-- [ ] Steps include enough detail for implementation
-- [ ] Dependencies are identified and valid
-- [ ] Effort estimate (1-8 points) is realistic and justified
-- [ ] Priority aligns with project goals
-- [ ] Implementation notes provide sufficient technical guidance
-- [ ] Large tasks (8 points) are properly decomposed
+- [ ] Steps include enough detail for implementation of stated requirements only
+- [ ] Dependencies are identified and valid for requested work
+- [ ] Effort estimate (1-5 points) is realistic and justified for requested scope
+- [ ] Priority aligns with stated goals
+- [ ] Implementation notes provide sufficient technical guidance without scope expansion
 - [ ] Blocked tasks have clear blocker details and resolution steps
 - [ ] Progress is tracked with dated log entries
+- [ ] **Task directly fulfills stated requirements without adding extra work**
 
 ### Documentation Standards:
 
-- **Task Updates**:
-  - Only update the specific task being modified in tasks.md
-  - Do not modify other tasks or documentation during status updates
-  - Add progress updates only to the relevant task's Progress Log section
-- **Use consistent formatting** across all task files
-- **Link to relevant code files** using `[filename](mdc:path/to/file)` format
-- **Reference external documentation** and APIs where applicable
-- **Include examples** and code snippets in implementation notes
-
-## Research Requirements
-
-**Always research up-to-date information and relevant documentation before creating or editing tasks:**
-
-- **Review existing codebase** and architecture
-- **Research best practices and documentation** for the technology stack
-- **Validate technical approaches** and feasibility
-- **Consider security and performance implications**
+- **Task Updates**: Only update the specific task being modified
+- **Consistent formatting** across all task files
+- **Link to relevant files** using `[filename](mdc:path/to/file)` format
+- **Research up-to-date information** before creating or editing tasks
