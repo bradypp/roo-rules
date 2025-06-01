@@ -1,32 +1,25 @@
 ---
-description: A guide for effectively writing documentation
+description: A guide for effectively writing inline code documentation
 globs: ['*']
 ---
 
-# Documentation Guidelines
+# Inline Code Documentation Guidelines
 
-## **When Writing Documentation:**
+## Core Principles:
 
-- **Focus on purpose over function** - explain why, not just what
-- **Keep it concise and easily readable** - use clear, simple language
-- **Don't document obvious code** - avoid redundant comments for self-explanatory code
-- **Document complex logic** - explain the reasoning behind non-obvious implementations
-- **Include examples** - show practical usage where helpful
-- **Update documentation with code changes** - keep docs synchronized with implementation
-
-## **Inline Code Documentation:**
-
-- **Document when helpful** - add comments for complex algorithms, business logic, or non-obvious implementations
+- **Explain "why", not "what"** - focus on intent and reasoning rather than obvious functionality
+- **Document when helpful** - add comments for complex, avoid commenting self-explanatory code
 - **Don't overdo it** - avoid commenting every line or stating the obvious
-- **Explain the "why"** - focus on intent and reasoning rather than what the code does
-- **Use clear, descriptive names** - good variable and function names reduce need for comments
-- **Document edge cases** - explain handling of special conditions or error states
+- **Use descriptive names** - good variable and function names reduce need for comments
 - **Keep comments current** - update or remove outdated comments when code changes
+- **Document edge cases** - explain handling of special conditions or error states
 
-## **Best Practices:**
+## Best Practices:
 
-- **Structure documentation logically** - start with overview, then details
-- **Use consistent formatting** - follow established patterns and style guides
-- **Include setup instructions** - provide clear steps for getting started
-- **Document APIs thoroughly** - include parameters, return values, and examples
-- **Review and revise** - treat documentation as living content that improves over time
+- **Use TODO comments** - mark incomplete work or future improvements clearly
+- **Add context for complex algorithms** - explain the approach and why it was chosen
+- **Document API contracts** - clarify expected inputs, outputs, and side effects
+- **Include links to references** - cite relevant documentation, RFCs, or issue numbers
+- **Write comments as complete sentences** - use proper punctuation and grammar
+- **Keep comments close to code** - place explanations near the relevant implementation
+- **Use consistent comment style** - follow project conventions for formatting

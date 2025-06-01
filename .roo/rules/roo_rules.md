@@ -3,19 +3,27 @@ description: Guidelines for creating and maintaining Roo Code rules to ensure co
 globs: .roo/**/*.md
 ---
 
-- **Required Rule Structure:**
+## Required Rule Structure:
 
-  ```markdown
-  ---
-  description: Clear, one-line description of what the rule enforces
-  globs: path/to/files/*.ext, other/path/**/*
-  alwaysApply: boolean
-  ---
+```markdown
+---
+description: Clear, one-line description of what the rule enforces
+tags: ['relevant tag']
+globs: path/to/files/*.ext, other/path/**/*
+---
 
-  - **Main Points in Bold**
-    - Sub-points with details
-    - Examples and explanations
-  ```
+## Subheading
+
+- **Main Points in Bold**
+  - Sub-points with details
+  - Examples and explanations
+
+### Sub-Subheading
+
+- **Main Points in Bold**
+  - Sub-points with details
+  - Examples and explanations
+```
 
 - **File References:**
 

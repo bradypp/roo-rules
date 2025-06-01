@@ -26,7 +26,7 @@ Follow these steps for each interaction:
    - **Notes and docs Directory Scan**: Scan all files in the [`notes/`](mdc:notes/) and [`docs/`](mdc:docs/) directories if they exist and extract relevant information including:
 
      - **Project documentation** (projectBrief.md, README.md, etc.): Project vision, goals, technical requirements, constraints, and success metrics
-     - **Task management files** (tasks.md, backlog.md, changelog.md): Active tasks, status, priorities, dependencies, completed work, and progress tracking
+     - **Task management files** (tasks.md, backlog.md, CHANGELOG.md): Active tasks, status, priorities, dependencies, completed work, and progress tracking
      - **Planning documents**: Feature roadmaps, planned functionality, development objectives, and acceptance criteria
      - **Meeting notes and decisions**: Important decisions, rationale, trade-offs, and lessons learned
      - **Architecture and design docs**: Technical specifications, system design, and implementation approaches

@@ -1,16 +1,7 @@
 ---
-description: Guidelines for Task Master mode - creating, editing, and maintaining structured task documentation and project workflows
-version: 1.0
+description: Core guidelines for Task Master mode
 tags: ['task-master', 'project-management', 'documentation', 'workflows']
-globs:
-  [
-    'notes/tasks.md',
-    'notes/projectBrief.md',
-    'notes/*.tasks.md',
-    'notes/**/*tasks*.md',
-    'notes/backlog.md',
-    'notes/changelog.md',
-  ]
+globs: ['notes/*md', 'notes/**/*md']
 ---
 
 # Task Master Mode Rules
@@ -27,14 +18,13 @@ globs:
 - **Maintain Documentation**: Only update:
   - Individual tasks in [`notes/tasks.md`](mdc:notes/tasks.md) when status changes
   - [`notes/backlog.md`](mdc:notes/backlog.md) according to task readiness and placement rules
-  - [`notes/changelog.md`](mdc:notes/changelog.md) when tasks are completed
-- **Manage Lifecycle**: Guide tasks through: planning → active → completed → archived
+- **Manage Lifecycle**: Guide tasks through: planning → active → completed
 - **Handle Mode Transitions**:
   - Accept delegated work from other modes and convert their outputs into actionable task structures or update existing tasks based on new information
 
 ## Task Lifecycle Management
 
-### **Requirement Processing:**
+### Requirement Processing:
 
 - **Requirement Analysis**: Break down user requirements into implementable tasks
 - **Ask Clarifying Questions**: When requirements are unclear, incomplete, or ambiguous, ask specific questions to gather necessary details
@@ -47,7 +37,7 @@ globs:
 
 Each task MUST include the following components:
 
-### **Essential Task Elements:**
+### Essential Task Elements:
 
 - **Unique ID**: Sequential numbering (1, 2, etc.) or semantic naming (CORE-001, UI-005)
 - **Clear Title**: Concise, action-oriented description
@@ -69,7 +59,7 @@ Each task MUST include the following components:
 - **Status**: `Planned`, `In Progress`, `Blocked`, `Completed`, `Cancelled`
 - **Implementation Notes**: Technical details, approach considerations, potential gotchas
 
-### **Task Decomposition Rule:**
+### Task Decomposition Rule:
 
 - **Any task with effort `8` MUST be broken down into smaller sub-tasks**
 - Sub-tasks should be `5` effort maximum
@@ -78,24 +68,24 @@ Each task MUST include the following components:
 
 ## Task Categorization and Readiness
 
-### **Task Readiness Assessment:**
+### Task Readiness Assessment:
 
-- **Ready for Near-Term Work**: Dependencies resolved or nearly resolved, requirements clear, can start within 1-2 months
+- **Ready for Immediate Work**: Dependencies resolved or nearly resolved, requirements clear, can start within 1-2 weeks
 - **Stable Requirements**: Tasks unlikely to change significantly based on their dependencies
 - **Blocked or Dependent**: Waiting on other tasks, external decisions, or resource availability
 - **Future Work**: Good ideas but not ready to start, low priority, or unclear requirements
 
-### **Task Placement Rules:**
+### Task Placement Rules:
 
 - **Add to `tasks.md`**:
-  - Tasks ready to start within 1-2 months with clear requirements
+  - Tasks ready to start within 1-2 weeks with clear requirements
   - Tasks with stable requirements unlikely to change based on dependencies
   - **Any task explicitly requested by user to be expanded** (regardless of readiness)
-- **Add to `backlog.md`**: Everything else as simple descriptions with basic priority and rough effort estimates
+- **Add to `backlog.md`**: Any tasks not ready with simple descriptions and basic priority and rough effort estimates
 - **Promote from Backlog**: Move tasks to `tasks.md` when dependencies resolve and work becomes ready to start
 - **Use Best Judgment**: Consider requirement stability and dependency impact when deciding placement
 
-### **Task Organization:**
+### Task Organization:
 
 - **Categorize by logical groupings** (Architecture, Features, Infrastructure, etc.) rather than phases
 - **Focus on dependency readiness** rather than timeline phases
@@ -103,7 +93,7 @@ Each task MUST include the following components:
 
 ## Task File Structure
 
-### **Primary Task File Format (`tasks.md`):**
+### Primary Task File Format (`tasks.md`):
 
 ```markdown
 # Project Tasks
@@ -142,15 +132,14 @@ Each task MUST include the following components:
 [Same structure]
 ```
 
-### **Specialized Task Files:**
+### Specialized Task Files:
 
 - [`notes/backlog.md`](mdc:notes/backlog.md): Future tasks, ideas, and high-level feature descriptions (simple format)
-- [`notes/changelog.md`](mdc:notes/changelog.md): Archive of project changes over time - finished tasks should be summarized and added to this
 - [`notes/tasks.md`](mdc:notes/tasks.md): Detailed tasks for current/next phase only (full format)
 
 ## Requirement Parsing and Task Generation
 
-### **Plan Analysis:**
+### Plan Analysis:
 
 When parsing [`notes/projectBrief.md`](mdc:notes/projectBrief.md) or plan files:
 
@@ -161,9 +150,9 @@ When parsing [`notes/projectBrief.md`](mdc:notes/projectBrief.md) or plan files:
   - Priority and timeline information
 - **Identify work streams** and categorize into logical task groups
 - **Map dependencies** between features and components
-- **Reference completed work** in [`notes/changelog.md`](mdc:notes/changelog.md) to avoid duplication
+- **Reference completed work** in [`docs/CHANGELOG.md`](mdc:docs/CHANGELOG.md) to avoid duplication
 
-### **User Requirement Processing:**
+### User Requirement Processing:
 
 When parsing direct user requirements:
 
@@ -172,9 +161,15 @@ When parsing direct user requirements:
 3. **Identify technical dependencies** and constraints
 4. **Extract actionable deliverables** from requirements
 5. **Estimate effort** and assign appropriate priority
-6. **Structure into tasks** with clear steps and acceptance criteria
+6. **Check existing tasks** - Review current tasks in [`notes/tasks.md`](mdc:notes/tasks.md) and [`notes/backlog.md`](mdc:notes/backlog.md) to identify if understood requirements relate to existing work
+7. **Update existing tasks** when there are new requirements:
+   - Add new steps or expand scope of current tasks
+   - Provide additional context or technical details
+   - Change priority or dependencies
+   - Add new acceptance criteria or implementation notes
+8. **Structure into new tasks** with clear steps and acceptance criteria (only for genuinely new work that doesn't relate to existing tasks)
 
-### **When to Ask Clarifying Questions:**
+### When to Ask Clarifying Questions:
 
 - **Ambiguous requirements**: When user requests are unclear or could be interpreted multiple ways
 - **Missing context**: When technical constraints, platforms, or environments are not clear
@@ -183,14 +178,14 @@ When parsing direct user requirements:
 - **Technology choices**: When specific technologies or approaches are not clear but impact implementation
 - **Priority conflicts**: When multiple requirements seem to conflict or compete for resources
 
-### **Task Placement Strategy:**
+### Task Placement Strategy:
 
 - **Add to `tasks.md`**: Tasks ready within 1-2 months, stable requirements, or explicitly requested by user
 - **Add to `backlog.md`**: Future work, unstable requirements, or tasks not ready to start as simple descriptions
 
 ## Task Categories and Templates
 
-### **Core Development Tasks:**
+### Core Development Tasks:
 
 - **Architecture & Setup**: Project structure, core systems, infrastructure
 - **Feature Development**: User-facing functionality, API endpoints, UI components
@@ -201,21 +196,21 @@ When parsing direct user requirements:
 - **Security**: Authentication, authorization, data protection
 - **DevOps**: Deployment, monitoring, CI/CD pipelines
 
-### **Maintenance Tasks:**
+### Maintenance Tasks:
 
 - **Bug Fixes**: Issue resolution, error handling improvements
 - **Refactoring**: Code cleanup, structure improvements
 - **Dependencies**: Library updates, security patches
 - **Monitoring**: Logging, metrics, alerting setup
 
-### **Research Tasks:**
+### Research Tasks:
 
 - **Technical Investigation**: Technology evaluation, proof of concepts, documentation
 - **Performance Analysis**: Benchmarking, bottleneck identification
 
 ## Task Status Management
 
-### **Status Workflow:**
+### Status Workflow:
 
 ```
 Planned → In Progress → [Blocked] → Completed
@@ -223,30 +218,16 @@ Planned → In Progress → [Blocked] → Completed
                       Cancelled
 ```
 
-### **Status Update Requirements:**
+### Status Update Requirements:
 
 - **Only Update the Specific Task**: When updating a task's status, only modify that individual task in tasks.md
-- **Completion Process**:
-
-  1. Update task status to "Completed" in tasks.md
-  2. Add completion summary to changelog.md in format:
-
-     ```markdown
-     ## YYYY-MM-DD: ✅ Task [ID]: Task Title
-
-     [Brief Description]
-
-     ### Details:
-
-     - [Implementation details in concise bullet points]
-     ```
-
+- **Completion Process**: Update task status to "Completed" in tasks.md
 - **Blocker Documentation**: Clear description of blocking issues and resolution steps
 - **Completion Criteria**: Verification that acceptance criteria are met
 
 ## Quality Standards
 
-### **Task Quality Checklist:**
+### Task Quality Checklist:
 
 - [ ] Task has unique, clear identifier
 - [ ] Title is action-oriented and specific
@@ -259,18 +240,12 @@ Planned → In Progress → [Blocked] → Completed
 - [ ] Blocked tasks have clear blocker details and resolution steps
 - [ ] Progress is tracked with dated log entries
 
-### **Documentation Standards:**
+### Documentation Standards:
 
 - **Task Updates**:
   - Only update the specific task being modified in tasks.md
   - Do not modify other tasks or documentation during status updates
   - Add progress updates only to the relevant task's Progress Log section
-- **Changelog Updates**:
-  - Only add entries when tasks are completed
-  - Use consistent date-based format (## YYYY-MM-DD)
-  - Include task ID and concise completion summary
-  - Focus on what was accomplished, not implementation details
-  - Follow previous formatting used in the file unless otherwise stated
 - **Use consistent formatting** across all task files
 - **Link to relevant code files** using `[filename](mdc:path/to/file)` format
 - **Reference external documentation** and APIs where applicable
@@ -284,39 +259,3 @@ Planned → In Progress → [Blocked] → Completed
 - **Research best practices and documentation** for the technology stack
 - **Validate technical approaches** and feasibility
 - **Consider security and performance implications**
-
-## Anti-Patterns to Avoid
-
-### **Poor Task Definition:**
-
-- ❌ Vague titles like "Fix bug" or "Improve performance"
-- ❌ Missing steps or acceptance criteria
-- ❌ No effort estimation or unrealistic estimates
-- ❌ Unclear or missing dependencies
-- ❌ Tasks too large without proper breakdown
-
-### **Incomplete Documentation:**
-
-- ❌ Missing implementation notes or technical guidance
-- ❌ No progress tracking or status updates
-- ❌ Outdated task information or stale priorities
-- ❌ No links to relevant code or documentation
-- ❌ Missing context for task decisions
-
-### **Process Issues:**
-
-- ❌ Creating tasks without understanding requirements
-- ❌ Not researching existing solutions or patterns
-- ❌ Ignoring dependencies and proper sequencing
-- ❌ No validation of task completion
-- ❌ Updating multiple tasks when only one needs to change
-- ❌ Adding changelog entries for incomplete tasks
-- ❌ Modifying backlog.md during task status updates
-- ❌ Poor communication of blockers or changes
-
-## Success Metrics
-
-### **Task Quality Metrics:**
-
-- **Dependency Management**: Success rate of proper task sequencing
-- **Requirement Coverage**: All project requirements translated to tasks
