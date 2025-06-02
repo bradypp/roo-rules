@@ -36,7 +36,7 @@ Each task MUST include the following components:
 
 ### Essential Task Elements:
 
-- Unique ID: Sequential numbering (1, 2, etc.) or semantic naming (CORE-001, UI-005)
+- Unique ID: Sequential numbering (1, 2, etc.)
 - Clear Title: Concise, action-oriented description
 - Description: Short description of task
 - Steps: Steps required for completion
