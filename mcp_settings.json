@@ -53,6 +53,23 @@
         "BRAVE_API_KEY": "BSAUfxYXObzAzU4Lc19w1xGg-BV_ua2"
       }
     },
+    "task-master": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "--package=task-master-ai",
+        "task-master-ai"
+      ],
+      "env": {
+        "GOOGLE_API_KEY": "AIzaSyAXLs3eFDklr_DnOqvUTVsTc47fDltOHrQ",
+        "TASK_MASTER_MAIN_MODEL": "gemini-2.5-flash-preview-05-20",
+        "TASK_MASTER_RESEARCH_MODEL": "gemini-2.5-flash-preview-05-20",
+        "TASK_MASTER_FALLBACK_MODEL": "gemini-2.5-flash-preview-05-20"
+      },
+      "type": "stdio",
+      "disabled": true,
+      "alwaysAllow": []
+    },
     "git": {
       "command": "uvx",
       "args": [
