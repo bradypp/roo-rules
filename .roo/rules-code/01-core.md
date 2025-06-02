@@ -1,10 +1,10 @@
 ---
-description: Core guidelines for Code mode - focused on writing, editing, and improving code effectively
-tags: ['code', 'development', 'best-practices']
+description: Guidelines for writing code - focused on writing, editing, and improving code effectively
+tags: ['act', 'code', 'development', 'best-practices']
 globs: ['*']
 ---
 
-# Code Mode Core Guidelines
+# Writing Code Guidelines
 
 ## Code Quality Standards
 

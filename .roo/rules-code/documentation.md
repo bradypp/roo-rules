@@ -1,3 +1,9 @@
+---
+description: Guidelines for writing code documentation
+tags: ['act', 'code', 'development', 'documentation', 'best-practices']
+globs: ['*']
+---
+
 # Code Documentation
 
 - Comment when helpful - add comments for complex code, avoid commenting self-explanatory code

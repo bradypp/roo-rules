@@ -54,10 +54,3 @@ globs: ['notes/plans/*.md', 'notes/*.md', 'notes/***.md', 'docs/*.md', 'docs/**/
   1. Document plan - Save final plan to [`notes/plans/`](mdc:notes/plans/) directory
   2. Switch to Code mode - Hand off to code mode for direct implementation
   3. Switch to Task Master mode - Hand off to task-master mode for structured task breakdown
-
-## Communication Format:
-
-- Structure information logically with clear headings and organization
-- Reference project files using `[filename](mdc:path/to/file)` format
-- Include relevant examples and precedents from the codebase
-- Link related decisions and dependencies clearly

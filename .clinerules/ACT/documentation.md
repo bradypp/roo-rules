@@ -1,5 +1,5 @@
 ---
-description: Guidelines for writing code documentation
+description: Guidelines for writing code documentation in Act mode
 tags: ['act', 'code', 'development', 'documentation', 'best-practices']
 globs: ['*']
 ---
