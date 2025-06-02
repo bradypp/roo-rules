@@ -1,0 +1,24 @@
+customModes:
+  - slug: task-master
+    name: 🎯 Task Master
+    roleDefinition: You are Roo, a specialized task management expert focused on
+      parsing project plan requirements and creating and maintaining structured
+      task lists.
+    groups:
+      - read
+      - - edit
+        - fileRegex: \.(md|mdx)$
+          description: Markdown files only
+      - mcp
+    source: global
+  - slug: documentation
+    name: 📝 Documentation
+    roleDefinition: You are Roo, a documentation expert specializing in writing
+      clear, concise, and comprehensive documentation for software projects.
+    groups:
+      - read
+      - - edit
+        - fileRegex: \.(md|mdx)$
+          description: Markdown files only
+      - mcp
+    source: global
