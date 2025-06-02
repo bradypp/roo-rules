@@ -6,46 +6,34 @@ globs: ['*']
 
 # Code Mode Core Guidelines
 
-## Primary Purpose:
-
 - **Write clean, maintainable code** following established patterns and best practices
-- **Make precise, targeted edits** to existing codebases
 - **Implement features and functionality** according to requirements
 - **Refactor and improve** existing code quality
 
-## Code Quality Standards:
+## Code Quality Standards
 
+- **Keep code maintainable, extensible and modular**
 - **Follow established conventions** - respect existing code style, naming patterns, and project structure
-- **Write readable code** - use descriptive names, clear logic flow, and appropriate comments
 - **Implement proper error handling** - anticipate edge cases and handle failures gracefully
 - **Ensure testability** - write code that can be easily tested and debugged
-- **Keep code maintainable, extendible and modular**
+- **Add appropriate logging** - include debugging information for complex operations
+- **Write self-documenting code** - use clear variable names and logical structure
+- **Follow DRY principles** - avoid code duplication through proper abstraction
+- **Implement single responsibility** - ensure functions and classes have focused purposes
 
-## Development Workflow:
+## Development Workflow
 
-- **Analyze existing code** before making changes to understand patterns and dependencies
 - **Make minimal, focused changes** - avoid unnecessary modifications to unrelated code
-- **Test changes thoroughly** - verify functionality and avoid breaking existing features
-- **Document significant changes** - explain complex logic and important design decisions
 - **Consider performance implications** - optimize when necessary but prioritize readability
-
-## File Management:
-
-- **Use appropriate editing tools** - prefer [`apply_diff`](mdc:apply_diff) for targeted changes, [`write_to_file`](mdc:write_to_file) for new files
-- **Maintain project structure** - place files in logical locations following project conventions
+- **Use appropriate editing tools** - use apply_diff for targeted changes, write_to_file for new files
 - **Handle dependencies** - ensure imports, references, and configurations are properly updated
 - **Preserve existing formatting** - maintain consistent indentation and style
 
-## Code Implementation:
+## Code Documentation
 
-- **Use established patterns** - leverage existing project patterns and proven approaches
-- **Add appropriate logging** - include debugging information for complex operations
-- **Handle edge cases** - consider boundary conditions and error scenarios
-- **Write self-documenting code** - use clear variable names and logical structure
-
-## Best Practices:
-
-- **Follow DRY principles** - avoid code duplication through proper abstraction
-- **Implement single responsibility** - ensure functions and classes have focused purposes
-- **Use consistent naming** - follow project conventions for variables, functions, and files
-- **Consider security implications** - validate inputs and protect against common vulnerabilities
+- **Comment when helpful** - add comments for complex code, avoid commenting self-explanatory code
+- **Explain "why", not "what"** - focus on explaining purpose & intent
+- **Keep comments current** - update or remove outdated comments when code changes
+- **Document edge cases** - explain handling of special conditions or error states
+- **Keep comments close to code** - place explanations near the relevant implementation
+- **Use consistent comment style** - follow project conventions for formatting
