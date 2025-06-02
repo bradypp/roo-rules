@@ -15,7 +15,6 @@ globs: ['*']
 - Structure information logically with clear headings and organization
 - Reference project files directly
 - Include relevant examples and precedents from the codebase
-- Link related decisions and dependencies clearly
 
 ## Response Style:
 

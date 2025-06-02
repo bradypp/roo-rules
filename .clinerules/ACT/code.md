@@ -1,5 +1,5 @@
 ---
-description: Guidelines for writing code in Act mode - focused on writing, editing, and improving code effectively
+description: Guidelines for writing code - focused on writing, editing, and improving code effectively
 tags: ['act', 'code', 'development', 'best-practices']
 globs: ['*']
 ---

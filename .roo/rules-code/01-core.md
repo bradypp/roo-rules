@@ -1,6 +1,6 @@
 ---
 description: Guidelines for writing code - focused on writing, editing, and improving code effectively
-tags: ['code', 'development', 'best-practices']
+tags: ['act', 'code', 'development', 'best-practices']
 globs: ['*']
 ---
 
