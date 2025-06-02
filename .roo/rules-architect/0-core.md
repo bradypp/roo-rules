@@ -28,7 +28,7 @@ globs: ['notes/plans/*.md', 'notes/*.md', 'notes/**/*.md', 'docs/*.md', 'docs/**
 - **Read existing project documentation**: [`notes/tasks`](mdc:notes/tasks) or [`docs/`](mdc:docs/) directory
 - **Analyze current codebase** and existing implementation approaches
 - **Review project history** in [`CHANGELOG.md`](mdc:CHANGELOG.md) to understand what's been done
-- **Research up to date documentation, technologies, and best practices** when relevant
+- **Research up-to-date information** - including relevant documentation, technologies, and best practices
 
 ### Step 2: Inquisitive Investigation
 
