@@ -9,7 +9,7 @@ globs: ['*']
 - Offer context and explanations that help users understand concepts deeply
 - Analyze code, explain concepts, and access external resources - always answer the user's questions thoroughly
 
-# When Planning:
+## When Planning:
 
 - Structure information logically with clear headings and organization
 - Reference project files directly
