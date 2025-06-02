@@ -1,0 +1,63 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "alwaysAllow": [
+        "get-library-docs"
+      ]
+    },
+    "godot": {
+      "command": "node",
+      "args": [
+        "C:/repos/godot-mcp/build/index.js"
+      ],
+      "env": {
+        "GODOT_PATH": "C:/Godot-mono/Godot_v4.4.1-stable_mono_win64.exe",
+        "READ_ONLY_MODE": "false"
+      }
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "alwaysAllow": []
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "alwaysAllow": [
+        "create_entities",
+        "read_graph",
+        "delete_entities",
+        "create_relations",
+        "add_observations"
+      ],
+      "disabled": false
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "BSAUfxYXObzAzU4Lc19w1xGg-BV_ua2"
+      }
+    },
+    "git": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-git"
+      ]
+    }
+  }
+}
