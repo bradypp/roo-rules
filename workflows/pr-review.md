@@ -1,7 +1,5 @@
 ---
 description: 'A detailed workflow for Cline (the AI assistant) to review Pull Requests specifically for the Cline project, utilizing the gh CLI and internal knowledge.'
-author: 'Cline Team'
-version: '1.0'
 tags: ['pr review', 'github', 'cline project', 'ai workflow', 'gh cli']
 globs: ['*.*']
 ---

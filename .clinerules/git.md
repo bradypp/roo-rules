@@ -10,4 +10,4 @@ globs: ['*']
 - Repository analysis - checking status, differences, commit history
 - Change analysis - comparing branches, staged vs unstaged changes
 - Git operations - commits, branch management, repository inspection
-- Always specify repo_path as "." for current repository
+- `repo_path` argument should always be the absolute path to current project directory. E.g., 'C:/repos/${repo_name}'
