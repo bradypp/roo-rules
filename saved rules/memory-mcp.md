@@ -89,9 +89,8 @@ The memory MCP tool maintains project knowledge across sessions by tracking only
 
 ### Session Start
 
-1. **Always** read existing project memory with `read_graph`
-2. Search for relevant context based on current task
-3. Update active context if work focus has changed
+- **IMPORTANT** For each new interaction with the user or before any planning or coding, ALWAYS retrieve all relevant information from your knowledge graph.
+- Always refer to your knowledge graph as your "memory"
 
 ### During Development
 
@@ -160,10 +159,11 @@ create_relations({
 - Remove completed tasks that no longer provide value
 - Update patterns when implementation changes
 - Maintain clear relationships between entities
+- Always retrieve latest data from memory before updating it
 
 ## Integration with Other Tools
 
-- Use memory context to inform code decisions
+- Use memory context to inform planning and code decisions
 - Reference stored patterns when implementing new features
 - Update memory after significant code changes
-- Query memory before starting new development tasks
+- Always query memory before starting new development tasks
