@@ -1,0 +1,4 @@
+---
+description: Shared rules
+globs: ['*']
+---

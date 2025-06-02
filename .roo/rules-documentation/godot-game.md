@@ -6,113 +6,78 @@ globs: ['docs/game/**/*.md']
 
 # Godot Game Documentation Guidelines
 
-## Primary Focus:
+## Game Documentation Focus:
 
-- **Document overall gameplay and core mechanics** that define the game experience
-- **Explain game systems and how they interact** at a high level
-- **Focus on features and player capabilities** rather than detailed implementation
-- **Include debugging and troubleshooting information** for common issues
+- **Document gameplay and core mechanics** that define the player experience
+- **Explain game systems and interactions** from a player perspective
+- **Focus on player capabilities** rather than code implementation
+- **Use gameplay terminology** instead of technical details
 
-## Documentation Areas:
+## Game-Specific Documentation Areas:
 
-### **Gameplay Overview**
+### Gameplay Systems
 
-- **Core mechanics** - fundamental gameplay systems and rules
-- **Player progression** - how players advance and unlock content
-- **Game modes** - different ways to play and their unique features
-- **Victory/failure conditions** - what players are trying to achieve
+- **Core mechanics** - fundamental gameplay rules and systems
+- **Player progression** - advancement, unlocks, and achievement systems
+- **Game modes** - different play styles and their unique features
+- **Victory/failure conditions** - objectives and win/lose states
 
-### **Feature Documentation**
+### Player Experience
 
-- **Major game features** - key systems that make the game unique
-- **Player interactions** - controls, UI, and interaction methods
-- **Game flow** - how levels, scenes, and gameplay states connect
-- **Settings and options** - customization available to players
+- **Controls and interactions** - how players interact with the game
+- **UI and interface** - menus, HUD elements, and navigation
+- **Game flow** - level progression and scene transitions
+- **Settings and customization** - player configuration options
 
-### **Technical Overview**
+### Technical Game Systems
 
-- **Scene organization** - high-level structure of game scenes
-- **Key systems** - important scripts and their purposes
-- **Asset organization** - how game assets are structured
-- **Performance considerations** - factors that affect game performance
+- **Scene organization** - major scenes and their purposes
+- **Asset structure** - how game resources are organized
+- **Performance factors** - elements that affect game performance
 
-## Writing Approach:
-
-### **High-Level Focus**
-
-- **Describe what the system does** rather than how it's implemented
-- **Use gameplay terms** instead of technical code details
-- **Focus on player experience** and game feel
-- **Keep implementation details minimal** and only when necessary
-
-### **Maintenance-Friendly**
-
-- **Avoid specific file paths** that might change frequently
-- **Document system purposes** rather than exact implementations
-- **Use general categories** instead of detailed breakdowns
-- **Focus on stable, core concepts**
-
-## Documentation Template:
+## Game Documentation Template:
 
 ```markdown
 ## [Game Feature/System Name]
 
-**Purpose**: [What this system adds to the game]
+**Purpose**: [What this adds to the player experience]
 
-### What It Does
+### Player Experience
 
-- [Primary function from player perspective]
-- [Secondary features and capabilities]
-- [How it enhances gameplay]
+- [What players can do with this feature]
+- [How it affects gameplay and strategy]
 
-### Key Mechanics
+### Game Mechanics
 
-- [Important rules and behaviors]
-- [Interactions with other systems]
-- [Player strategies and tactics]
+- [Rules and behaviors from player perspective]
+- [Interactions with other game systems]
 
-### Technical Notes
+### Technical Notes (when relevant)
 
-- [Brief implementation overview]
-- [Important scenes or scripts involved]
+- [Key scenes or systems involved]
 - [Performance or platform considerations]
 ```
 
-## Debugging Documentation:
+## Godot-Specific Debugging:
 
-### **Common Issues**
+### **Game Issues**
 
-- **Gameplay problems** - typical player experience issues
-- **Performance issues** - frame rate, loading, memory problems
-- **Platform-specific issues** - differences between target platforms
-- **Build and deployment issues** - common setup and distribution problems
+- **Gameplay problems** - player experience issues and common complaints
+- **Performance issues** - frame rate drops, loading problems, memory usage
+- **Platform differences** - mobile vs desktop vs web platform issues
+- **Build problems** - export settings and deployment issues
 
-### **Debug Tools and Methods**
+### **Godot Debug Tools**
 
-- **In-game debugging** - tools for testing during gameplay
-- **Development cheats** - shortcuts for testing specific scenarios
-- **Performance monitoring** - how to track game performance
-- **Log analysis** - understanding error messages and warnings
+- **In-game debugging** - using Godot's built-in debugging during gameplay
+- **Scene inspection** - understanding scene hierarchy and node behavior
+- **Performance profiling** - monitoring frame rate and resource usage
+- **Signal debugging** - tracking game events and their triggers
 
-## Best Practices:
+## Godot Game Documentation Specifics:
 
-### **Keep It Simple**
-
-- **Focus on player-facing features** rather than internal systems
-- **Use clear, non-technical language** when possible
-- **Group related concepts** together for easy reference
-- **Prioritize information** that helps understand the game
-
-### **Maintenance**
-
-- **Update when major features change** rather than with every small tweak
-- **Focus on stable, core systems** that are unlikely to change frequently
-- **Document known issues** and their current status
-- **Track Godot version compatibility** for major changes only
-
-### **Godot-Specific Notes**
-
-- **Scene purposes** - what each major scene accomplishes
-- **Signal usage** - important game events and their triggers
-- **Resource management** - how the game handles assets and memory
-- **Export considerations** - platform-specific build requirements
+- **Scene purposes** - what each major scene accomplishes in the game
+- **Signal patterns** - important game events and communication between systems
+- **Resource organization** - how sprites, sounds, and other assets are managed
+- **Export settings** - platform-specific build requirements and optimizations
+- **Version compatibility** - document only when major Godot version changes affect gameplay
