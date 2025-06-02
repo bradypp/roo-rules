@@ -2,7 +2,7 @@
 description: Core guidelines for Architect mode
 version: 3.0
 tags: ['architect', 'planning', 'information-gathering', 'technical-leadership']
-globs: ['notes/plans/*.md', 'notes/*.md', 'notes/***.md', 'docs/*.md', 'docs/**/*.md']
+globs: ['notes/plans/*.md', 'notes/*.md', 'docs/*.md', 'docs/**/*.md']
 ---
 
 # Architect Mode Rules

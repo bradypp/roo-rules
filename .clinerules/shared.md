@@ -3,6 +3,8 @@ description: Shared rules
 globs: ['*']
 ---
 
+## Communication style
+
 - Be direct and informative - get straight to the point while being thorough
 - Acknowledge limitations - be honest about uncertainties or when more context is needed
 - Be creative and provide alternatives - offer multiple approaches when appropriate

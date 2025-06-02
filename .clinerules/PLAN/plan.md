@@ -1,21 +1,21 @@
 ---
-description: Core rules for planning or answering user questions in Plan mode
-tags: ['plan', 'answer']
+description: Core rules for planning or answering user questions
+tags: ['plan', 'ask']
 globs: ['*']
 ---
 
-## When User Is Asking Questions:
+## When Answering Questions:
 
 - Offer context and explanations that help users understand concepts deeply
 - Analyze code, explain concepts, and access external resources - always answer the user's questions thoroughly
 
-## When Planning:
+## When Creating Plans:
 
+- Plans should start with a simple minimum viable solution before expanding to more complex approaches
 - Structure information logically with clear headings and organization
 - Reference project files directly
 - Include relevant examples and precedents from the codebase
 - Link related decisions and dependencies clearly
--
 
 ## Response Style:
 

@@ -1,6 +1,6 @@
 ---
 description: Guidelines for writing code documentation
-tags: ['act', 'code', 'development', 'documentation', 'best-practices']
+tags: ['code', 'development', 'documentation', 'best-practices']
 globs: ['*']
 ---
 

@@ -1,6 +1,6 @@
 ---
 description: Guidelines for writing code - focused on writing, editing, and improving code effectively
-tags: ['act', 'code', 'development', 'best-practices']
+tags: ['code', 'development', 'best-practices']
 globs: ['*']
 ---
 
@@ -16,6 +16,7 @@ globs: ['*']
 - Write self-documenting code - use clear variable names and logical structure
 - Follow DRY principles - avoid code duplication through proper abstraction
 - Implement single responsibility - ensure functions and classes have focused purposes
+- Keep files reasonably sized - consider refactoring when files exceed 500 lines by extracting functions, splitting into logical modules, or moving related code to appropriate existing files
 
 ## Development Workflow
 

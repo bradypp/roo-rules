@@ -1,5 +1,6 @@
 ---
 description: Core guidelines for Ask mode interactions
+tags: ['ask']
 globs: ['*']
 ---
 

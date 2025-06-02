@@ -1,6 +1,6 @@
 ---
-description: Core rules for planning or answering user questions in PLAN mode
-tags: ['plan', 'answer']
+description: Core rules for planning or answering user questions
+tags: ['plan', 'ask']
 globs: ['*']
 ---
 
