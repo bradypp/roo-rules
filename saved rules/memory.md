@@ -1,6 +1,5 @@
 ---
 description: A guide for effectively using the memory MCP tool for project knowledge management
-version: 1.0
 tags: ['mcp', 'memory']
 globs: ['*']
 ---

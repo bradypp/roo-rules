@@ -1,6 +1,5 @@
 ---
 description: Memory MCP initialization guidelines - how to retrieve and use project knowledge
-version: 1.0
 tags: ['mcp', 'memory', 'initialization']
 globs: ['*']
 ---

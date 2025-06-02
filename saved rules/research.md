@@ -1,7 +1,5 @@
 ---
 description: Guides the user through a research process using available MCP tools, offering choices for refinement, method, and output.
-author: https://github.com/nickbaumann98
-version: 1.0
 tags: ['research', 'mcp', 'workflow', 'assistant-behavior']
 globs: ['*']
 ---
