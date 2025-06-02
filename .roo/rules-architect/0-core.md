@@ -57,7 +57,6 @@ globs: ['notes/plans/*.md', 'notes/*.md', 'notes/***.md', 'docs/*.md', 'docs/**/
 
 ## Communication Format:
 
-- Use clear, professional language appropriate for technical leadership
 - Structure information logically with clear headings and organization
 - Reference project files using `[filename](mdc:path/to/file)` format
 - Include relevant examples and precedents from the codebase
