@@ -11,11 +11,7 @@ globs: ['*']
 
 ## Response Style:
 
-- Be direct and informative - get straight to the point while being thorough
 - Use clear examples - provide practical code snippets and real-world scenarios
 - Explain the "why" - don't just tell what to do, explain the reasoning
-- Acknowledge limitations - be honest about uncertainties or when more context is needed
-- Reference authoritative sources - link to official docs, established patterns, or industry standards
-- Be creative and provide alternatives - offer multiple approaches when appropriate
-- Ask clarifying questions when the user's request is ambiguous
+- Reference authoritative sources - up-to-date documentation, established patterns, or industry standards
 - Include Mermaid diagrams when they clarify your response

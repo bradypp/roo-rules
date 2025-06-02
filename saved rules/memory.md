@@ -21,29 +21,7 @@ Follow these steps for each interaction:
 
 3. **Memory Scope**: Focus memory on the **current project** (whatever project is being actively worked on) and general user preferences that apply across projects.
 
-4. **Memory Initialization**: If memory is empty then initialize using the following instructions:
-
-   - **Notes and docs Directory Scan**: Scan all files in the [`notes/`](mdc:notes/) and [`docs/`](mdc:docs/) directories if they exist and extract relevant information including:
-
-     - **Project documentation** (projectBrief.md, README.md, etc.): Project vision, goals, technical requirements, constraints, and success metrics
-     - **Task management files** (tasks.md, backlog.md, CHANGELOG.md): Active tasks, status, priorities, dependencies, completed work, and progress tracking
-     - **Planning documents**: Feature roadmaps, planned functionality, development objectives, and acceptance criteria
-     - **Meeting notes and decisions**: Important decisions, rationale, trade-offs, and lessons learned
-     - **Architecture and design docs**: Technical specifications, system design, and implementation approaches
-     - **Any other documentation**: Project context, setup instructions, historical decisions, and development insights
-
-   - **Entity Creation from Notes**: Create comprehensive entities for all discovered information:
-
-     - Projects, features, modules, and components from project docs
-     - Tasks, milestones, and work items from task management files
-     - Decisions, requirements, and architectural components from planning docs
-     - Issues, solutions, and lessons learned from meeting notes
-
-   - **Relationship Mapping**: Establish relations between all entities showing dependencies, progress flow, completion status, and logical connections
-
-   - **Memory Validation**: After initialization, verify that all key project components are properly connected in the knowledge graph and that no critical information is isolated
-
-5. **Memory Categories:**
+4. **Memory Categories:**
 
    - While conversing with the user, be attentive to any new information that falls into these categories **for the current project or general user preferences**:
 
@@ -67,29 +45,19 @@ Follow these steps for each interaction:
    m) **Development Decisions** (technical choices made, alternatives considered, rationale behind decisions, trade-offs, performance considerations)
    n) **Code Quality** (refactoring opportunities, code smells, optimization targets, maintenance tasks)
 
-6. **Memory Update:**
+5. **Memory Update:**
    - If any new information was gathered during the interaction, update your memory as follows:
-     a) Create entities for **current project** components (features, tasks, milestones, codebases, services, APIs, frameworks, tools, environments, etc.) or **general user preferences** only
+     a) Create entities for **current project** components (features, milestones, services, APIs, frameworks, tools, environments, etc.) or **general user preferences** only
      b) Connect them to existing entities using relations (depends_on, implements, part_of, blocks, follows, enables, etc.)
      c) Store progress updates, decisions, and context as observations
      d) Track task status changes and feature development lifecycle
      e) Maintain relationships between requirements, implementations, and completion status
      f) Record what was accomplished in each work session and what comes next
-   - **Efficiency Guidelines**: Update memory strategically to minimize MCP tool usage:
-     - Save memory after significant progress milestones or task completion
-     - Batch related updates together rather than frequent small updates
-     - Prioritize saving critical project decisions and major developments
-     - Update when switching between project phases
-     - Only save observations if genuinely useful knowledge for future development
-   - **Notes and Docs Directory Sync**:
-     - When any files in the [`notes/`](mdc:notes/) or [`docs/`](mdc:docs/) directories are updated, automatically re-scan these files and update memory to reflect the latest project state
-     - Monitor for changes in all documentation files and synchronize memory entities and relations accordingly
-     - Ensure documentation-based entities remain current with file modifications
    - **Manual Memory Update**:
-     - When user explicitly requests 'update memory', perform a comprehensive memory update that includes:
+     - Only perform memory updates when user explicitly requests 'update memory'
+     - When requested, perform a comprehensive memory update that includes:
        - Current interaction context and any new information gathered
-       - Re-scan ALL files in the [`notes/`](mdc:notes/) and [`docs/`](mdc:docs/) directories for changes
-       - Update entities and relations based on the latest file contents
+       - Reference CHANGELOG.md and use git MCP to check recent changes (git_diff & git_log)
        - Validate that all project components are properly connected in the knowledge graph
        - Report what was updated or synchronized during the manual update process
 
