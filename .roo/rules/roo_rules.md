@@ -1,6 +1,6 @@
 ---
 description: Guidelines for creating and maintaining Roo Code rules to ensure consistency and effectiveness.
-globs: .roo/**/*.md
+globs: ['.roo/**/*.md']
 ---
 
 ## Required Rule Structure:
@@ -9,58 +9,35 @@ globs: .roo/**/*.md
 ---
 description: Clear, one-line description of what the rule enforces
 tags: ['relevant tag']
-globs: path/to/files/*.ext, other/path/**/*
+globs: ['path/to/files/*.ext', 'other/path/**/*']
 ---
 
 ## Subheading
 
-- **Main Points in Bold**
+- Main Point
   - Sub-points with details
   - Examples and explanations
 
 ### Sub-Subheading
 
-- **Main Points in Bold**
-  - Sub-points with details
-  - Examples and explanations
+- Main Point
 ```
 
-- **File References:**
+## File References:
 
-  - Use `[filename](mdc:path/to/file)` ([filename](mdc:filename)) to reference files
-  - Example: [prisma.md](mdc:.roo/rules/prisma.md) for rule references
-  - Example: [schema.prisma](mdc:prisma/schema.prisma) for code references
+- Use `[filename](mdc:path/to/file)` ([filename](mdc:filename)) to reference files
+- Example: [prisma.md](mdc:.roo/rules/prisma.md) for rule references
 
-- **Code Examples:**
+## Rule Content Guidelines:
 
-  - Use language-specific code blocks
-
-  ```typescript
-  // ✅ DO: Show good examples
-  const goodExample = true;
-
-  // ❌ DON'T: Show anti-patterns
-  const badExample = false;
-  ```
-
-- **Rule Content Guidelines:**
-
-  - Start with high-level overview
-  - Include specific, actionable requirements
-  - Show examples of correct implementation
-  - Reference existing code when possible
-  - Keep rules DRY by referencing other rules
-
-- **Rule Maintenance:**
-
-  - Update rules when new patterns emerge
-  - Add examples from actual codebase
-  - Remove outdated patterns
-  - Cross-reference related rules
-
-- **Best Practices:**
-  - Use bullet points for clarity
-  - Keep descriptions concise
-  - Include both DO and DON'T examples
-  - Reference actual code over theoretical examples
-  - Use consistent formatting across rules
+- Use language-specific code blocks
+- Start with high-level overview
+- Include specific, actionable requirements
+- Show examples of correct implementation
+- Reference existing code when possible
+- Keep rules DRY by referencing other rules
+- Update rules when new patterns emerge
+- Remove outdated patterns
+- Use bullet points for clarity
+- Keep descriptions concise
+- Check current rule file formatting for consistency

@@ -6,13 +6,8 @@ globs: ['*']
 
 # Git MCP Tool Usage
 
-## When to Use Git MCP
-
-- **Always use git MCP** when user requests git comparisons or git analysis
-- **Repository analysis** - checking status, differences, commit history
-- **Change analysis** - comparing branches, staged vs unstaged changes
-- **Git operations** - commits, branch management, repository inspection
-
-## Usage Guidelines
-
-- **Always specify repo_path** as "." for current repository
+- Always use git MCP when user requests git comparisons or git analysis
+- Repository analysis - checking status, differences, commit history
+- Change analysis - comparing branches, staged vs unstaged changes
+- Git operations - commits, branch management, repository inspection
+- Always specify repo_path as "." for current repository

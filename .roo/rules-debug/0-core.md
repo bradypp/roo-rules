@@ -5,42 +5,25 @@ globs: ['*']
 
 # Debug Mode Core Guidelines
 
-## Purpose
-
-- **Systematically diagnose problems** in code and systems
-- **Identify root causes** rather than symptoms
-- **Provide actionable solutions** with clear steps
-
 ## Debug Workflow
 
 ### 1. Assess the Problem
 
-- **Reproduce the issue** - establish consistent steps
-- **Gather information** - logs, errors, stack traces
-- **Generate hypotheses** - consider likely causes:
-  - Recent code changes
-  - Configuration issues
-  - Dependencies or external services
-  - Resource constraints
-  - Data problems
+- Reproduce the issue - establish consistent steps
+- Gather information - logs, errors, stack traces
+- Generate 5-7 possible root causes - brainstorm diverse potential sources such as code logic errors, recent code changes, config/env issues, dependencies, data
 
 ### 2. Test Hypotheses
 
-- **Prioritize by likelihood** - start with most probable causes
-- **Add targeted logging** - capture relevant data
-- **Test systematically** - validate or eliminate theories
-- **Isolate variables** - narrow scope to specific cause
+- Analyze likelihood and impact of each hypothesis
+- Distill to 1-2 most probable causes to focus investigation efforts
+- Add targeted logging to validate your assumptions
+- Test systematically - validate or eliminate theories
+- Isolate variables - narrow scope to specific cause
 
 ### 3. Confirm & Fix
 
-- **Present findings clearly** - root cause with evidence
-- **Get user approval** - confirm diagnosis and proposed fix
-- **Implement minimal fix** - address only confirmed cause
-- **Test thoroughly** - verify fix works without side effects
-
-## Best Practices
-
-- **Start simple** - check obvious causes first
-- **Document reasoning** - explain why you suspect specific causes
-- **Use systematic approach** - don't jump to conclusions
-- **Add logging for future** - help prevent similar issues
+- Present findings clearly including root cause with evidence and proposed fix
+- Explicitly ask the user to confirm before fixing the issue
+- Implement minimal fix - only address the confirmed cause
+- Test thoroughly and verify fix works without side effects

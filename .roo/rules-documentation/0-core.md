@@ -15,7 +15,7 @@ globs: ['docs/*md', 'docs/**/*md']
   - CHANGELOG update reflecting all changes on this branch
 - User can just say 'update' to trigger this update process
 
-#### **CHANGELOG Structure:**
+## CHANGELOG Structure:
 
 ```markdown
 # Changelog
