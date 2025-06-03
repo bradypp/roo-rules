@@ -1,5 +1,5 @@
 ---
-description: Guidelines for creating and maintaining Roo Code rules to ensure consistency and effectiveness.
+description: Guidelines for creating and maintaining rules to ensure consistency and effectiveness.
 globs: ['.roo/**/*.md']
 ---
 
