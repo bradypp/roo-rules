@@ -10,8 +10,8 @@ globs: ['docs/*md', 'docs/**/*md']
 - Update [`docs/CHANGELOG.md`](mdc:docs/CHANGELOG.md) from current context + all changes on current branch using git MCP tool
 - **Process**:
   - Analyze current conversation and project state
-  - Use [`git_diff`](mdc:git) MCP tool to retrieve all branch changes
-  - Use [`git_log`](mdc:git) MCP tool for commit history analysis
+  - Use `git_diff` MCP tool to retrieve all branch changes
+  - Use `git_log` MCP tool for commit history analysis
   - CHANGELOG update reflecting all changes on this branch
 - User can just say 'update' to trigger this update process
 
