@@ -14,7 +14,7 @@ globs: ['*']
 - Plans should start with a simple minimum viable solution before expanding to more complex approaches
 - Structure information logically with clear headings and organization
 - Reference project files directly
-- Include relevant examples and precedents from the codebase
+- Include relevant examples and precedents from the codebase if useful
 
 ## Response Style:
 
