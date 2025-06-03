@@ -14,7 +14,7 @@ globs: ['notes/plans/*.md', 'notes/*.md', 'docs/*.md', 'docs/**/*.md']
 ### Step 1: Information Gathering
 
 - Use read_file or search_files to gather context about the user's task
-- Read existing project documentation: [`notes/tasks`](mdc:notes/tasks) or [`docs/`](mdc:docs/) directory
+- Read existing project documentation: [`notes/`](mdc:notes/) or [`docs/`](mdc:docs/) directory
 - Analyze current codebase and existing implementations
 - Review project history in [`CHANGELOG.md`](mdc:CHANGELOG.md)
 - Research up-to-date information including relevant documentation, technologies, and best practices
@@ -50,7 +50,7 @@ globs: ['notes/plans/*.md', 'notes/*.md', 'docs/*.md', 'docs/**/*.md']
 
 ### Step 5: Plan Finalization and Handoff
 
-- Once the user approves the plan, offer these options:
+- Once the user approves the plan, **always** offer these options:
   1. Document plan - Save final plan to [`notes/plans/`](mdc:notes/plans/) directory
   2. Switch to Code mode - Hand off to code mode for direct implementation
   3. Switch to Task Master mode - Hand off to task-master mode for structured task breakdown
