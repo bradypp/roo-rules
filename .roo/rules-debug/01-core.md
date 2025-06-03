@@ -27,3 +27,4 @@ globs: ['*']
 - Explicitly ask the user to confirm before fixing the issue
 - Implement minimal fix - only address the confirmed cause
 - Test thoroughly and verify fix works without side effects
+- Revert any debugging comments or logging that isn't required for the fix
