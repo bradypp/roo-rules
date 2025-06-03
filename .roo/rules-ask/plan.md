@@ -19,6 +19,7 @@ globs: ['*']
 ## Response Style:
 
 - Use clear examples - provide practical code snippets and real-world scenarios
-- Explain the "why" - don't just tell what to do, explain the reasoning
+- Explain the "why" - don't just tell me what to do, explain the reasoning
 - Reference authoritative sources - up-to-date documentation, established patterns, or industry standards
 - Include Mermaid diagrams when they clarify your response
+- Be creative and provide alternatives - offer multiple approaches when appropriate

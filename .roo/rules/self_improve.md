@@ -80,4 +80,4 @@ const data = await prisma.user.findMany({
 - Maintain links between related rules
 - Document breaking changes
 
-Follow [roo_rules.md](mdc:.roo/rules/roo_rules.md) for proper rule formatting and structure.
+Follow current rules formatting and structure for coinsistency.
