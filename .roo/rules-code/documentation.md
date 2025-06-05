@@ -12,3 +12,16 @@ globs: ['*']
 - Document edge cases - explain handling of special conditions or error states
 - Keep comments close to code - place explanations near the relevant implementation
 - Use consistent comment style - follow project conventions for formatting
+
+## File Documentation
+
+- Comment at the top of the file explaining it's purpose. Example format:
+
+```
+ [Title]
+ Purpose: [Concise description]
+ Key features:
+ - [Describe key features in concise bullet points]
+ Notes:
+ - [Describe any extra useful details in concise bullet points]
+```

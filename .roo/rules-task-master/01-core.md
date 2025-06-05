@@ -12,9 +12,7 @@ globs: ['notes/*md', 'notes/**/*md']
   - [`notes/projectBrief.md`](mdc:notes/projectBrief.md) or [`notes/plans/*.md`](mdc:notes/plans/*.md)
   - Direct user requirements provided in chat
   - Existing task lists that need structuring or expansion
-- Maintain Documentation: Only update:
-  - Individual tasks in task files in [`notes/tasks/`](mdc:notes/tasks/) when status changes
-  - [`notes/tasks/backlog/[feature-name]-backlog.md`](mdc:notes/tasks/backlog/[feature-name]-backlog.md) - sort according to priority and readiness
+- Maintain Documentation: Only update individual tasks in task files in [`notes/tasks/`](mdc:notes/tasks/) when status changes
 - Manage Lifecycle: Guide tasks through: planning → active → completed
 
 ## Task Lifecycle Management
@@ -57,12 +55,14 @@ Each task MUST include the following components:
 
 ## Task Placement Rules:
 
-- Add tasks to feature-specific task files: Tasks ready to start within 1-2 weeks with stable requirements
-- Add tasks to `backlog.md`: Future work with unstable requirements or many dependencies that can't be started within 1-2 weeks
+- Add tasks to task file fully expanded when ready to start within 1-2 weeks with stable requirements
+- If tasks they have unstable requirements or many dependencies so can't be started within 1-2 weeks then add them unexpanded to bottom of the task file in a backlog section
 
 ## Task File Structure
 
-### Primary Task File Format (e.g., `project-brief-tasks.md`):
+### Primary Task File Format [`notes/tasks/[feature-name]-tasks.md`](mdc:notes/tasks/[feature-name]-tasks.md) (e.g., `project-brief-tasks.md`):
+
+### Fully expanded task example:
 
 ```markdown
 # Project Tasks
@@ -101,10 +101,16 @@ Each task MUST include the following components:
 [Same structure]
 ```
 
-### Specialized Task Files:
+### Unexpanded backlog task example:
 
-- [`notes/tasks/backlog/[feature-name]-backlog.md`](mdc:notes/tasks/backlog/[feature-name]-backlog.md): Future tasks, ideas, and high-level feature descriptions (simple format)
-- [`notes/tasks/[feature-name]-tasks.md`](mdc:notes/tasks/): Feature-specific detailed tasks (full format)
+```markdown
+## Backlog
+
+- [ ] 15: Integrate third-party analytics
+  - Dependencies: [11, 12, 13, 14]
+  - Description: Integrate analytics provider (TBD) for user tracking and reporting.
+  - Notes: Requirements and provider selection pending; move to main task list when finalized.
+```
 
 ## Documentation Standards
 

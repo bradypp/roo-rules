@@ -14,9 +14,8 @@ globs: ['notes/plans/*.md', 'notes/*.md', 'docs/*.md', 'docs/**/*.md']
 ### Step 1: Information Gathering
 
 - Use read_file or search_files to gather context about the user's task
-- Read existing project documentation: [`notes/`](mdc:notes/) or [`docs/`](mdc:docs/) directory
+- Read existing project documentation: [`docs/`](mdc:docs/) directory
 - Analyze current codebase and existing implementations
-- Review project history in [`CHANGELOG.md`](mdc:CHANGELOG.md)
 - Research up-to-date information including relevant documentation, technologies, and best practices
 
 ### Step 2: Inquisitive Investigation
