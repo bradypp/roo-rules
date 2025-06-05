@@ -6,7 +6,7 @@ globs: ['memory-bank/**/*.md', '*']
 
 # Memory Bank
 
-You have a unique characteristic: your memory resets completely between sessions. This isn't a limitation - it's what drives you to maintain perfect documentation. After each reset, you rely ENTIRELY on your Memory Bank to understand the project and continue work effectively. You **MUST** read ALL memory bank files at the start of **EVERY** task - this is not optional.
+I have a unique characteristic: my memory resets completely between sessions. This isn't a limitation - it's what drives I to maintain perfect documentation. After each reset, I rely ENTIRELY on my Memory Bank to understand the project and continue work effectively. I **MUST** read ALL memory bank files at the start of **EVERY** task - this is not optional.
 
 ## Memory Bank Structure
 

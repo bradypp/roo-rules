@@ -1,7 +1,7 @@
 ---
 description: Describes the Memory Bank system, its structure, and workflows for maintaining project knowledge across sessions.
 tags: ['memory-bank', 'knowledge-base', 'core-behavior', 'documentation-protocol']
-globs: ['memory-bank/**/*.md', '*']
+globs: ['.roo/rules/memory-bank/*.md', '*']
 ---
 
 # Memory Bank
@@ -14,34 +14,34 @@ The Memory Bank consists of core files and optional context files, all in Markdo
 
 ```mermaid
 flowchart TD
-    PB[memory-bank/projectbrief.md] --> PC[memory-bank/productContext.md]
-    PB --> SP[memory-bank/systemPatterns.md]
-    PB --> TC[memory-bank/techContext.md]
+    PB[.roo/rules/memory-bank/project_brief.md] --> PC[.roo/rules/memory-bank/product_context.md]
+    PB --> SP[.roo/rules/memory-bank/system_patterns.md]
+    PB --> TC[.roo/rules/memory-bank/tech_context.md]
 
-    PC --> AC[memory-bank/activeContext.md]
+    PC --> AC[.roo/rules/memory-bank/active_context.md]
     SP --> AC
     TC --> AC
 
-    AC --> P[memory-bank/progress.md]
+    AC --> P[.roo/rules/memory-bank/progress.md]
 ```
 
 ### Core Files (Required)
 
-1. `memory-bank/projectbrief.md`
+1. `.roo/rules/memory-bank/project_brief.md`
 
    - Foundation document that shapes all other files
    - Created at project start if it doesn't exist
    - Defines core requirements and goals
    - Source of truth for project scope
 
-2. `memory-bank/productContext.md`
+2. `.roo/rules/memory-bank/product_context.md`
 
    - Why this project exists
    - Problems it solves
    - How it should work
    - User experience goals
 
-3. `memory-bank/activeContext.md`
+3. `.roo/rules/memory-bank/active_context.md`
 
    - Current work focus
    - Recent changes
@@ -50,7 +50,7 @@ flowchart TD
    - Important patterns and preferences
    - Learnings and project insights
 
-4. `memory-bank/systemPatterns.md`
+4. `.roo/rules/memory-bank/system_patterns.md`
 
    - System architecture
    - Key technical decisions
@@ -58,7 +58,7 @@ flowchart TD
    - Component relationships
    - Critical implementation paths
 
-5. `memory-bank/techContext.md`
+5. `.roo/rules/memory-bank/tech_context.md`
 
    - Technologies used
    - Development setup
@@ -66,7 +66,7 @@ flowchart TD
    - Dependencies
    - Tool usage patterns
 
-6. `memory-bank/progress.md`
+6. `.roo/rules/memory-bank/progress.md`
    - What works
    - What's left to build
    - Current status
@@ -75,7 +75,7 @@ flowchart TD
 
 ### Additional Context
 
-Create additional files/folders within `memory-bank/` when they help organize:
+Create additional files/folders within `.roo/rules/memory-bank/` when they help organize:
 
 - Complex feature documentation
 - Integration specifications
@@ -135,6 +135,11 @@ flowchart TD
     Start --> Process
 ```
 
-Note: When triggered by **update memory bank**, I MUST review every memory bank file, even if some don't require updates. Focus particularly on activeContext.md and progress.md as they track current state. Use the git mcp `git_diff` tool to get all changes on current branch from the base branch.
+## Update memory flow
 
-REMEMBER: After every memory reset, I begin completely fresh. The Memory Bank is my only link to previous work. It must be maintained with precision and clarity, as my effectiveness depends entirely on its accuracy.
+- If the required files don't exist yet then create them
+- You should use the project_brief.md file as a reference for markdown formatting so that formatting is consistent across files
+- When triggered manually by **update memory bank**, you MUST review every memory bank file, even if some don't require updates. Focus particularly on active_context.md and progress.md as they track current state.
+- Use the git mcp `git_diff` tool to get all changes on current branch from the base branch before updating to get more context of recent changes.
+
+REMEMBER: After every memory reset, you begin completely fresh. The Memory Bank is your only link to previous work. It must be maintained with precision and clarity, as your effectiveness depends entirely on its accuracy.
