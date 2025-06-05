@@ -5,7 +5,7 @@ globs: ['.roo/**/*.md']
 
 ## Required Rule Structure:
 
-```markdown
+```md
 ---
 description: Clear, one-line description of what the rule enforces
 tags: ['relevant tag']
@@ -21,6 +21,8 @@ globs: ['path/to/files/*.ext', 'other/path/**/*']
 ### Sub-Subheading
 
 - Main Point
+  - Sub-points with details
+  - Examples and explanations
 ```
 
 ## File References:
@@ -40,4 +42,4 @@ globs: ['path/to/files/*.ext', 'other/path/**/*']
 - Remove outdated patterns
 - Use bullet points for clarity
 - Keep descriptions concise
-- Check current rule file formatting for consistency
+- Match current file formatting for consistency
