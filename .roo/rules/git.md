@@ -10,4 +10,5 @@ globs: ['*']
 - Repository analysis - checking status, differences, commit history
 - Change analysis - comparing branches, staged vs unstaged changes
 - Git operations - commits, branch management, repository inspection
-- Always specify repo_path as "." for current repository
+- Always specify `repo_path` as "." for current repository
+- When using `git_diff`: if the arg `target` isn't given by the user then assume it's "dev".
