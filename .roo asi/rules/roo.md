@@ -1,6 +1,6 @@
 ---
-description: Roo tool rules
-globs: ["*"]
+description: Roo rules
+globs: ['*']
 ---
 
 - Utilize `codebase_search` for efficient and intelligent code discovery

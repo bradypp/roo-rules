@@ -113,5 +113,6 @@ flowchart TD
 - If `.roo/rules/memory-bank/memory_bank.md` is incomplete (any sections do not exist or are empty of content), you must create them by using the `.roo/rules/memory-bank/project_brief.md` file as a reference.
 - Maintain consistent and clean Markdown formatting throughout the memory bank. Use headings, lists, and code blocks to keep the information readable.
 - When triggered manually by "update memory", you MUST review the `.roo/rules/memory-bank/project_brief.md` file and EVERY section in `.roo/rules/memory-bank/memory_bank.md`, even if some don't require immediate changes. Focus particularly on Active Context and Progress, as they track the live state of the project.
+- If requested by the user, use the git mcp `git_diff` tool before updating memory to get a all changes on the current branch compared to the base branch. This provides essential context on recent development work.
 
 REMEMBER: After every memory reset, you begin completely fresh. The Memory Bank is your only link to previous work. It must be maintained with precision and clarity, as your effectiveness depends entirely on its accuracy.
