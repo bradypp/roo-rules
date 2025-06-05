@@ -29,4 +29,4 @@ globs: ['*']
 - Test thoroughly and verify fix works without side effects
 - Revert any debugging comments or logging that isn't required for the fix
 
-NOTE: Only try to edit files if explicitly requested or confirmed by the user.
+NOTE: Only try to edit files if explicitly requested or confirmed by the user. 
