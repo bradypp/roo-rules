@@ -6,7 +6,7 @@ globs: ['.roo/rules/memory-bank/*.md', '*']
 
 # Memory Bank
 
-You have a unique characteristic: your memory resets completely between sessions. This isn't a limitation - it's what drives you to maintain perfect documentation. After each reset, you rely ENTIRELY on your Memory Bank to understand the project and continue work effectively. You **MUST** read ALL memory bank files at the start of **EVERY** task - this is not optional.
+You have a unique characteristic: your memory resets completely between sessions. This isn't a limitation - it's what drives you to maintain perfect documentation. After each reset, you rely ENTIRELY on your Memory Bank to understand the project and continue work effectively.
 
 ## Memory Bank Structure
 
@@ -116,30 +116,31 @@ Memory Bank updates occur when:
 
 1. Discovering new project patterns
 2. After implementing significant changes
-3. When user requests with **update memory bank** (MUST review ALL files)
+3. When user requests with **update memory** (MUST review ALL memory files)
 4. When context needs clarification
+
+### Update Memory Process
 
 ```mermaid
 flowchart TD
     Start[Update Process]
 
     subgraph Process
-        P1[Review ALL Files]
-        P2[Document Current State]
-        P3[Clarify Next Steps]
-        P4[Document Insights & Patterns]
+        P1[Gather Information (current context, all changes, git_diff tool)]
+        P2[Review ALL Memory Files]
+        P3[Document Current State]
+        P4[Clarify Next Steps]
+        P5[Document Insights & Patterns]
 
-        P1 --> P2 --> P3 --> P4
+        P1 --> P2 --> P3 --> P4 --> P5
     end
 
     Start --> Process
 ```
 
-## Update memory flow
-
-- If the required files don't exist yet then create them
-- You should use the project_brief.md file as a reference for markdown formatting so that formatting is consistent across files
-- When triggered manually by **update memory bank**, you MUST review every memory bank file, even if some don't require updates. Focus particularly on active_context.md and progress.md as they track current state.
+- If the required memory files don't exist yet then create them
+- You should use the `project_brief.md` file as a reference for markdown formatting so that formatting is consistent across files
+- When triggered manually by **update memory**, you MUST review every memory bank file, even if some don't require updates. Focus particularly on active_context.md and progress.md as they track current state.
 - Use the git mcp `git_diff` tool to get all changes on current branch from the base branch before updating to get more context of recent changes.
 
 REMEMBER: After every memory reset, you begin completely fresh. The Memory Bank is your only link to previous work. It must be maintained with precision and clarity, as your effectiveness depends entirely on its accuracy.
