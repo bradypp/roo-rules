@@ -27,7 +27,7 @@ flowchart TD
 
 ### Core Files (Required)
 
-1. `memory-bank/projectbrief.md`
+1. `memory-bank/projectBrief.md`
 
    - Foundation document that shapes all other files
    - Created at project start if it doesn't exist

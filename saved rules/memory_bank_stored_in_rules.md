@@ -139,7 +139,7 @@ flowchart TD
 ```
 
 - If the required memory files don't exist yet then create them
-- You should use the `project_brief.md` file as a reference for markdown formatting so that formatting is consistent across files
+- Maintain consistent and clean Markdown formatting throughout the memory bank. Use headings, lists, and code blocks to keep the information readable.
 - When triggered manually by **update memory**, you MUST review every memory bank file, even if some don't require updates. Focus particularly on active_context.md and progress.md as they track current state.
 - Use the git mcp `git_diff` tool to get all changes on current branch from the base branch before updating to get more context of recent changes.
 
