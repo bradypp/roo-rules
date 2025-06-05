@@ -1,7 +1,7 @@
 ---
 description: Core guidelines for Task Master mode
-tags: ['task-master', 'project-management', 'documentation', 'workflows']
-globs: ['notes/*md', 'notes/**/*md']
+tags: ["task-master", "project-management", "documentation", "workflows"]
+globs: ["notes/*md", "notes/**/*md"]
 ---
 
 # Task Master Mode Rules

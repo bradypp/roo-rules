@@ -1,7 +1,8 @@
 ---
 description: Describes the Memory Bank system, its structure, and workflows for maintaining project knowledge across sessions.
-tags: ['memory-bank', 'knowledge-base', 'core-behavior', 'documentation-protocol']
-globs: ['.roo/rules/memory-bank/*.md', '*']
+tags:
+  ["memory-bank", "knowledge-base", "core-behavior", "documentation-protocol"]
+globs: [".roo/rules/memory-bank/*.md", "*"]
 ---
 
 # Memory Bank

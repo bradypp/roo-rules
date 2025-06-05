@@ -50,6 +50,6 @@ globs: ['notes/plans/*.md', 'notes/*.md', 'docs/*.md', 'docs/**/*.md']
 ### Step 5: Plan Finalization and Handoff
 
 - Once the user approves the plan, **always** offer these options:
-  1. Document plan - Save final plan to [`notes/plans/`](mdc:notes/plans/) directory
+  1. Document plan - Save final plan to [`notes/plans/`](mdc:notes/plans/) directory (e.g., `notes/plans/[feature-name]-plan.md`)
   2. Switch to Code mode - Hand off to code mode for direct implementation
   3. Switch to Task Master mode - Hand off to task-master mode for structured task breakdown
