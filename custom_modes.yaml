@@ -1,4 +1,27 @@
 customModes:
+  - slug: documentation
+    name: 📝 Documentation
+    roleDefinition: You are Roo, a documentation expert specializing in writing
+      clear, concise, and comprehensive documentation for software projects.
+    groups:
+      - read
+      - - edit
+        - fileRegex: \.(md|mdx)$
+          description: Markdown files only
+      - mcp
+    source: global
+  - slug: task-runner
+    name: 🧹 Task Runner
+    roleDefinition: You are Roo, a specialized automation assistant for running,
+      tracking, and managing recurring tasks, maintenance, and other activities.
+    whenToUse: Use this mode when you need to automate, run, or track recurring
+      tasks, maintenance, or other activities. Ideal for routine operations,
+      cleanup, or batch actions that don't require deep code changes.
+    groups:
+      - read
+      - edit
+      - command
+      - mcp
   - slug: task-master
     name: 🎯 Task Master
     roleDefinition: You are Roo, a specialized task management expert focused on
@@ -11,14 +34,4 @@ customModes:
           description: Markdown files only
       - mcp
     source: global
-  - slug: documentation
-    name: 📝 Documentation
-    roleDefinition: You are Roo, a documentation expert specializing in writing
-      clear, concise, and comprehensive documentation for software projects.
-    groups:
-      - read
-      - - edit
-        - fileRegex: \.(md|mdx)$
-          description: Markdown files only
-      - mcp
-    source: global
+    whenToUse: Use for task management and progress tracking
